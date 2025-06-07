@@ -340,8 +340,10 @@ static void announce(void)
 #ifdef _VCS_REVISION
 	"(" _VCS_REVISION ")\n"
 #endif
-      "Minix 3.4.Orc6 - SO - UNIFESP 1s2025\n"
-      "Projeto Pratico (I) - Equipe VVLC\n"
+      "======================================"
+      "| Minix 3.4.Orc6 - SO - UNIFESP 1s2025 |\n"
+      "|    Projeto Pratico (I) - Equipe VVLC    |\n"
+      "======================================\n"
       OS_RELEASE);
   printf("MINIX is open source software, see http://www.minix3.org\n");
 }
