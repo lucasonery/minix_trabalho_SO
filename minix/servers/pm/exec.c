@@ -111,6 +111,8 @@ int do_newexec(void)
 	/* System will save command line for debugging, ps(1) output, etc. */
 	strncpy(rmp->mp_name, args.progname, PROC_NAME_LEN-1);
 	rmp->mp_name[PROC_NAME_LEN-1] = '\0';
+	/* Adicionado 1.4 */
+	printf("Executando: %s\n", args.progname);
 
 	/* Save offset to initial argc (for procfs) */
 	rmp->mp_frame_addr = (vir_bytes) args.stack_high - args.frame_len;
