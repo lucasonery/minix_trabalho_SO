@@ -27,6 +27,7 @@
 #include <libexec.h>
 #include <sys/ptrace.h>
 #include "mproc.h"
+#include <limits.h>
 
 #define ESCRIPT	(-2000)	/* Returned by read_header for a #! script. */
 #define PTRSIZE	sizeof(char *) /* Size of pointers in argv[] and envp[]. */
@@ -34,10 +35,20 @@
 /*===========================================================================*
  *				do_exec					     *
  *===========================================================================*/
-int
-do_exec(void)
+int do_exec(void)
 {
 	message m;
+
+	char name_buffer[PATH_MAX];
+	if (sys_datacopy(who_e,(vir_bytes)m_in.m_lc_pm_exec.name,
+			SELF, (vir_bytes)name_buffer, PATH_MAX) != OK) {
+	   printf("Erro ao copiar o nome do Programa.\n");
+	   return EFAULT;
+	}
+
+	name_buffer[PATH_MAX - 1]= '\0';
+
+	printf("Executando: %s\n", name_buffer);
 
 	/* Forward call to VFS */
 	memset(&m, 0, sizeof(m));
@@ -111,8 +122,6 @@ int do_newexec(void)
 	/* System will save command line for debugging, ps(1) output, etc. */
 	strncpy(rmp->mp_name, args.progname, PROC_NAME_LEN-1);
 	rmp->mp_name[PROC_NAME_LEN-1] = '\0';
-	/* Adicionado 1.4 */
-	printf("Executando: %s\n", args.progname);
 
 	/* Save offset to initial argc (for procfs) */
 	rmp->mp_frame_addr = (vir_bytes) args.stack_high - args.frame_len;
