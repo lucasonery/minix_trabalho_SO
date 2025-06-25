@@ -31,6 +31,7 @@ struct proc {
   u64_t p_cpu_time_left;	/* time left to use the cpu */
   unsigned p_quantum_size_ms;	/* assigned time quantum in ms
 				   FIXME remove this */
+  clock_t estimated_burst;
   struct proc *p_scheduler;	/* who should get out of quantum msg */
   unsigned p_cpu;		/* what CPU is the process running on */
 #ifdef CONFIG_SMP

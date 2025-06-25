@@ -1,0 +1,26 @@
+all ===> tools
+*** WARNING: "MKTOOLS" is set to "no"; this will prevent building and
+*** updating your host toolchain.  This should be used only as a
+*** temporary workaround for toolchain problems, as it will result
+*** in version skew and build errors over time!
+all ===> lib
+all ===> lib/csu
+all ===> lib/../minix/lib/libsys
+    compile  libsys/sef_st.o
+In file included from sef_st.c:12:
+/usr/src/minix_trabalho_SO/minix/kernel/proc.h:21:10: fatal error: 'minix/clock.h' file not found
+#include <minix/clock.h>
+         ^
+1 error generated.
+*** Error code 1
+
+Stop.
+make[2]: stopped in /usr/src/minix_trabalho_SO/minix/lib/libsys
+*** Error code 1
+
+Stop.
+make[1]: stopped in /usr/src/minix_trabalho_SO/lib
+*** Error code 1
+
+Stop.
+make: stopped in /usr/src/minix_trabalho_SO
