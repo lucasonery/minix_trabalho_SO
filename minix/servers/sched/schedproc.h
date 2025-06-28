@@ -21,6 +21,7 @@
  */
 
 EXTERN struct schedproc {
+        u64_t remaining_time;
 	endpoint_t endpoint;	/* process endpoint id */
 	endpoint_t parent;	/* parent endpoint id */
 	unsigned flags;		/* flag bits */
