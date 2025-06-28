@@ -41,6 +41,9 @@
 
 #include <minix/syslib.h>
 
+static struct proc *run_q_head = NULL;
+
+
 /* Scheduling and message passing functions */
 static void idle(void);
 /**
@@ -1574,7 +1577,7 @@ asyn_error:
 /*===========================================================================*
  *				enqueue					     * 
  *===========================================================================*/
-void enqueue(proc_t *rp)
+void enqueue(struct proc_t *rp)
 {
     /* SRTN: insert process into run_q_head ordered by remaining_time */
     struct proc **pp = &run_q_head;
@@ -1639,7 +1642,7 @@ static void enqueue_head(struct proc *rp)
 /*===========================================================================*
  *				dequeue					     * 
  *===========================================================================*/
-proc_t *dequeue(proc_t *rp)
+proc_t *dequeue(struct proc_t *rp)
 {
     struct proc **pp = &run_q_head;
     while (*pp) {
