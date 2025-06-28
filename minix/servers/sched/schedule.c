@@ -170,7 +170,7 @@ int do_start_scheduling(message *m_ptr)
 
     /* ← SRTN: usar quantum mínimo e inicializar remaining_time */
     rmp->time_slice       = 1;    /* quantum mínimo para preempção rápida */
-    rmp->remaining_time   = m_ptr->m_lsys_sched_scheduling_start.SERVICE_TIME;
+    rmp->remaining_time   = 500;
 
     /* Install process into the ready queue */
     enqueue(rmp);
