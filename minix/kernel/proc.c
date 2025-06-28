@@ -1577,7 +1577,7 @@ asyn_error:
 /*===========================================================================*
  *				enqueue					     * 
  *===========================================================================*/
-void enqueue(struct proc_t *rp)
+void enqueue(struct proc *rp)
 {
     /* SRTN: insert process into run_q_head ordered by remaining_time */
     struct proc **pp = &run_q_head;
@@ -1642,7 +1642,7 @@ static void enqueue_head(struct proc *rp)
 /*===========================================================================*
  *				dequeue					     * 
  *===========================================================================*/
-proc_t *dequeue(struct proc_t *rp)
+proc_t *dequeue(struct proc *rp)
 {
     struct proc **pp = &run_q_head;
     while (*pp) {
