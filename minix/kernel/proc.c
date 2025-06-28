@@ -116,7 +116,7 @@ static void set_idle_name(char * name, int n)
 
 static message m_notify_buff = { 0, NOTIFY_MESSAGE };
 
-PUBLIC void proc_init(void)
+void proc_init(void)
 {
     struct proc *rp;
     struct priv *sp;
@@ -1574,7 +1574,7 @@ asyn_error:
 /*===========================================================================*
  *				enqueue					     * 
  *===========================================================================*/
-PUBLIC void enqueue(proc_t *rp)
+void enqueue(proc_t *rp)
 {
     /* SRTN: insert process into run_q_head ordered by remaining_time */
     struct proc **pp = &run_q_head;
@@ -1639,7 +1639,7 @@ static void enqueue_head(struct proc *rp)
 /*===========================================================================*
  *				dequeue					     * 
  *===========================================================================*/
-PUBLIC proc_t *dequeue(proc_t *rp)
+proc_t *dequeue(proc_t *rp)
 {
     struct proc **pp = &run_q_head;
     while (*pp) {
@@ -1655,7 +1655,7 @@ PUBLIC proc_t *dequeue(proc_t *rp)
 /*===========================================================================*
  *				pick_proc				     * 
  *===========================================================================*/
-PUBLIC struct proc *pick_proc(void)
+struct proc *pick_proc(void)
 {
     /* SRTN: always pick head of run_q_head (shortest remaining time) */
     return run_q_head;
