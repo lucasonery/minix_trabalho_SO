@@ -20,6 +20,7 @@
 #include "priv.h"
 
 struct proc {
+  struct proc *p_next;
   u64_t p_remaining_time;
   struct stackframe_s p_reg;	/* process' registers saved in stack frame */
   struct segframe p_seg;	/* segment descriptors */
