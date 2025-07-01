@@ -1642,7 +1642,7 @@ static void enqueue_head(struct proc *rp)
 /*===========================================================================*
  *				dequeue					     * 
  *===========================================================================*/
-proc_t *dequeue(struct proc *rp)
+struct proc_t *dequeue(struct proc *rp)
 {
     struct proc **pp = &run_q_head;
     while (*pp) {
