@@ -1,0 +1,825 @@
+/usr/src/minix_trabalho_SO/lib/libc/gen/arc4random.c:508:1: warning: unused function 'arc4random_atfork_prepare' [-Wunused-function]
+arc4random_atfork_prepare(void)
+^
+/usr/src/minix_trabalho_SO/lib/libc/gen/arc4random.c:517:1: warning: unused function 'arc4random_atfork_parent' [-Wunused-function]
+arc4random_atfork_parent(void)
+^
+/usr/src/minix_trabalho_SO/lib/libc/gen/arc4random.c:524:1: warning: unused function 'arc4random_atfork_child' [-Wunused-function]
+arc4random_atfork_child(void)
+^
+3 warnings generated.
+/usr/src/minix_trabalho_SO/lib/libc/gen/arc4random.c:508:1: warning: unused function 'arc4random_atfork_prepare' [-Wunused-function]
+arc4random_atfork_prepare(void)
+^
+/usr/src/minix_trabalho_SO/lib/libc/gen/arc4random.c:517:1: warning: unused function 'arc4random_atfork_parent' [-Wunused-function]
+arc4random_atfork_parent(void)
+^
+/usr/src/minix_trabalho_SO/lib/libc/gen/arc4random.c:524:1: warning: unused function 'arc4random_atfork_child' [-Wunused-function]
+arc4random_atfork_child(void)
+^
+3 warnings generated.
+/usr/src/minix_trabalho_SO/lib/libc/stdlib/malloc.c:343:1: warning: function 'wrterror' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/lib/libc/stdlib/malloc.c:343:1: warning: function 'wrterror' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/lib/libc/uuid/uuid_create.c:56:41: warning: comparison of integers of different signs: 'ssize_t' (aka 'int') and 'unsigned int' [-Wsign-compare]
+                if(read(rfd, store++, sizeof(*store)) < sizeof(*store)) {
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~
+1 warning generated.
+/usr/src/minix_trabalho_SO/lib/libc/uuid/uuid_create.c:56:41: warning: comparison of integers of different signs: 'ssize_t' (aka 'int') and 'unsigned int' [-Wsign-compare]
+                if(read(rfd, store++, sizeof(*store)) < sizeof(*store)) {
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_big5.c:514:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_big5.c:514:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_dechanyu.c:443:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_dechanyu.c:443:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_euc.c:437:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_euc.c:437:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_euctw.c:430:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_euctw.c:430:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_gbk2k.c:476:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_gbk2k.c:476:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_hz.c:728:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_hz.c:728:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_iso2022.c:1349:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_iso2022.c:1349:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_johab.c:394:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_johab.c:394:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_mskanji.c:546:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_mskanji.c:546:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_ues.c:474:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_ues.c:474:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf1632.c:485:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:145:49: warning: passing 'wchar_t *' (aka 'int *') to parameter of type '_citrus_wc_t *' (aka 'unsigned int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                ret = _FUNCNAME(stdenc_cstowc)(_CE_TO_EI(ce), &wc, csid, idx);
+                                                              ^~~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf1632.c:449:29: note: passing argument to parameter 'wc' here
+                              _wc_t * __restrict wc,
+                                                 ^
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf1632.c:485:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf1632.c:91:65: note: passing argument to parameter 'pwc' here
+_citrus_UTF1632_mbrtowc_priv(_UTF1632EncodingInfo *ei, wchar_t *pwc,
+                                                                ^
+2 warnings generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf1632.c:485:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:145:49: warning: passing 'wchar_t *' (aka 'int *') to parameter of type '_citrus_wc_t *' (aka 'unsigned int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+                ret = _FUNCNAME(stdenc_cstowc)(_CE_TO_EI(ce), &wc, csid, idx);
+                                                              ^~~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf1632.c:449:29: note: passing argument to parameter 'wc' here
+                              _wc_t * __restrict wc,
+                                                 ^
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf1632.c:485:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf1632.c:91:65: note: passing argument to parameter 'pwc' here
+_citrus_UTF1632_mbrtowc_priv(_UTF1632EncodingInfo *ei, wchar_t *pwc,
+                                                                ^
+2 warnings generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf8.c:397:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf8.c:397:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf7.c:573:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_utf7.c:573:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_viqr.c:574:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_viqr.c:574:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_zw.c:514:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+In file included from /usr/src/minix_trabalho_SO/lib/libc/citrus/modules/citrus_zw.c:514:
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_stdenc_template.h:160:48: warning: passing '_citrus_wc_t *restrict' (aka 'unsigned int *restrict') to parameter of type 'wchar_t *' (aka 'int *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        return _FUNCNAME(mbrtowc_priv)(_CE_TO_EI(ce), wc, s, n,
+                                                      ^~
+/usr/src/minix_trabalho_SO/lib/libc/citrus/citrus_ctype_template.h:155:28: note: passing argument to parameter here
+                                   wchar_t * __restrict,
+                                                       ^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/divdc3.c:21:1: warning: no previous prototype for function '__divdc3' [-Wmissing-prototypes]
+__divdc3(double __a, double __b, double __c, double __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/divdc3.c:21:1: warning: no previous prototype for function '__divdc3' [-Wmissing-prototypes]
+__divdc3(double __a, double __b, double __c, double __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/divsc3.c:21:1: warning: no previous prototype for function '__divsc3' [-Wmissing-prototypes]
+__divsc3(float __a, float __b, float __c, float __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/divsc3.c:21:1: warning: no previous prototype for function '__divsc3' [-Wmissing-prototypes]
+__divsc3(float __a, float __b, float __c, float __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/divxc3.c:22:1: warning: no previous prototype for function '__divxc3' [-Wmissing-prototypes]
+__divxc3(long double __a, long double __b, long double __c, long double __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/divxc3.c:22:1: warning: no previous prototype for function '__divxc3' [-Wmissing-prototypes]
+__divxc3(long double __a, long double __b, long double __c, long double __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/muldc3.c:21:1: warning: no previous prototype for function '__muldc3' [-Wmissing-prototypes]
+__muldc3(double __a, double __b, double __c, double __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/muldc3.c:21:1: warning: no previous prototype for function '__muldc3' [-Wmissing-prototypes]
+__muldc3(double __a, double __b, double __c, double __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/mulsc3.c:21:1: warning: no previous prototype for function '__mulsc3' [-Wmissing-prototypes]
+__mulsc3(float __a, float __b, float __c, float __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/mulsc3.c:21:1: warning: no previous prototype for function '__mulsc3' [-Wmissing-prototypes]
+__mulsc3(float __a, float __b, float __c, float __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/mulxc3.c:23:1: warning: no previous prototype for function '__mulxc3' [-Wmissing-prototypes]
+__mulxc3(long double __a, long double __b, long double __c, long double __d)
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/sys/external/bsd/compiler_rt/dist/lib/builtins/mulxc3.c:23:1: warning: no previous prototype for function '__mulxc3' [-Wmissing-prototypes]
+__mulxc3(long double __a, long double __b, long double __c, long double __d)
+^
+1 warning generated.
+.
+.....
+..
+yacc: 10 shift/reduce conflicts.
+yacc: 38 shift/reduce conflicts.
+libcrypto_pic.a(e_rc5.pico): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x47e): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0xbe): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+libcrypto_pic.a(rc5ofb64.pico): In function `RC5_32_ofb64_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5ofb64.c:(.text+0xe9): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+libcrypto_pic.a(rc5_ecb.pico): In function `RC5_32_ecb_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5_ecb.c:(.text+0x83): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+/usr/src/minix_trabalho_SO/external/bsd/libc++/lib/../dist/libcxx/src/locale.cpp:6195:1: warning: function '__throw_runtime_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/libc++/lib/../dist/libcxx/src/locale.cpp:6195:1: warning: function '__throw_runtime_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/libc++/lib/../dist/libcxx/src/new.cpp:245:1: warning: function '__throw_bad_alloc' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/libc++/lib/../dist/libcxx/src/new.cpp:245:1: warning: function '__throw_bad_alloc' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+1 warning generated.
+rt_auxhelper.cc:43:1: warning: function '__cxa_bad_cast' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_auxhelper.cc:53:1: warning: function '__cxa_bad_typeid' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_auxhelper.cc:64:1: warning: function '__cxa_pure_virtual' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_auxhelper.cc:75:1: warning: function '__cxa_deleted_virtual' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_auxhelper.cc:80:1: warning: function '__cxa_throw_bad_array_new_length' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+5 warnings generated.
+rt_auxhelper.cc:43:1: warning: function '__cxa_bad_cast' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_auxhelper.cc:53:1: warning: function '__cxa_bad_typeid' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_auxhelper.cc:64:1: warning: function '__cxa_pure_virtual' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_auxhelper.cc:75:1: warning: function '__cxa_deleted_virtual' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_auxhelper.cc:80:1: warning: function '__cxa_throw_bad_array_new_length' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+5 warnings generated.
+rt_exception.cc:1095:29: warning: missing field 'action_record' initializer [-Wmissing-field-initializers]
+        dwarf_eh_action action = {0};
+                                   ^
+rt_exception.cc:1355:1: warning: function '__cxa_call_unexpected' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_exception.cc:263:23: warning: unused variable 'abi_exception_class' [-Wunused-const-variable]
+static const uint32_t abi_exception_class = 
+                      ^
+3 warnings generated.
+rt_exception.cc:1095:29: warning: missing field 'action_record' initializer [-Wmissing-field-initializers]
+        dwarf_eh_action action = {0};
+                                   ^
+rt_exception.cc:1355:1: warning: function '__cxa_call_unexpected' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+rt_exception.cc:263:23: warning: unused variable 'abi_exception_class' [-Wunused-const-variable]
+static const uint32_t abi_exception_class = 
+                      ^
+3 warnings generated.
+rt_libelftc_dem_gnu3.c:460:1: warning: no previous prototype for function '__cxa_demangle_gnu3' [-Wmissing-prototypes]
+__cxa_demangle_gnu3(const char *org)
+^
+1 warning generated.
+rt_libelftc_dem_gnu3.c:460:1: warning: no previous prototype for function '__cxa_demangle_gnu3' [-Wmissing-prototypes]
+__cxa_demangle_gnu3(const char *org)
+^
+1 warning generated.
+rt_terminate.cc:37:2: warning: function 'terminate' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+        {
+        ^
+1 warning generated.
+rt_terminate.cc:37:2: warning: function 'terminate' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+        {
+        ^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/libc++/lib/../dist/libcxx/src/system_error.cpp:200:1: warning: function '__throw_system_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/libc++/lib/../dist/libcxx/src/system_error.cpp:200:1: warning: function '__throw_system_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/lutok/dist/state.cpp:495:9: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+    if (!::access(file.c_str(), R_OK) == 0)
+        ^                             ~~
+/usr/src/minix_trabalho_SO/external/bsd/lutok/dist/state.cpp:495:9: note: add parentheses after the '!' to evaluate the comparison first
+    if (!::access(file.c_str(), R_OK) == 0)
+        ^
+         (                                )
+/usr/src/minix_trabalho_SO/external/bsd/lutok/dist/state.cpp:495:9: note: add parentheses around left hand side expression to silence this warning
+    if (!::access(file.c_str(), R_OK) == 0)
+        ^
+        (                            )
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/lutok/dist/state.cpp:495:9: warning: logical not is only applied to the left hand side of this comparison [-Wlogical-not-parentheses]
+    if (!::access(file.c_str(), R_OK) == 0)
+        ^                             ~~
+/usr/src/minix_trabalho_SO/external/bsd/lutok/dist/state.cpp:495:9: note: add parentheses after the '!' to evaluate the comparison first
+    if (!::access(file.c_str(), R_OK) == 0)
+        ^
+         (                                )
+/usr/src/minix_trabalho_SO/external/bsd/lutok/dist/state.cpp:495:9: note: add parentheses around left hand side expression to silence this warning
+    if (!::access(file.c_str(), R_OK) == 0)
+        ^
+        (                            )
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_REPLACE' [-Wunused-function]
+HT_PROTOTYPE(event_debug_map, event_debug_entry, node, hash_debug_entry,
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:183:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_REPLACE(struct name *head, struct type *elm)                \
+  ^
+<scratch space>:20:1: note: expanded from here
+event_debug_map_HT_REPLACE
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_FOREACH_FN' [-Wunused-function]
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:222:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_FOREACH_FN(struct name *head,                               \
+  ^
+<scratch space>:27:1: note: expanded from here
+event_debug_map_HT_FOREACH_FN
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_START' [-Wunused-function]
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:248:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_START(struct name *head)                                    \
+  ^
+<scratch space>:28:1: note: expanded from here
+event_debug_map_HT_START
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_NEXT' [-Wunused-function]
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:264:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_NEXT(struct name *head, struct type **elm)                  \
+  ^
+<scratch space>:29:1: note: expanded from here
+event_debug_map_HT_NEXT
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_NEXT_RMV' [-Wunused-function]
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:279:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_NEXT_RMV(struct name *head, struct type **elm)              \
+  ^
+<scratch space>:30:1: note: expanded from here
+event_debug_map_HT_NEXT_RMV
+^
+5 warnings generated.
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_REPLACE' [-Wunused-function]
+HT_PROTOTYPE(event_debug_map, event_debug_entry, node, hash_debug_entry,
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:183:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_REPLACE(struct name *head, struct type *elm)                \
+  ^
+<scratch space>:20:1: note: expanded from here
+event_debug_map_HT_REPLACE
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_FOREACH_FN' [-Wunused-function]
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:222:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_FOREACH_FN(struct name *head,                               \
+  ^
+<scratch space>:27:1: note: expanded from here
+event_debug_map_HT_FOREACH_FN
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_START' [-Wunused-function]
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:248:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_START(struct name *head)                                    \
+  ^
+<scratch space>:28:1: note: expanded from here
+event_debug_map_HT_START
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_NEXT' [-Wunused-function]
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:264:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_NEXT(struct name *head, struct type **elm)                  \
+  ^
+<scratch space>:29:1: note: expanded from here
+event_debug_map_HT_NEXT
+^
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/event.c:194:1: warning: unused function 'event_debug_map_HT_NEXT_RMV' [-Wunused-function]
+/usr/src/minix_trabalho_SO/external/bsd/libevent/dist/ht-internal.h:279:3: note: expanded from macro 'HT_PROTOTYPE'
+  name##_HT_NEXT_RMV(struct name *head, struct type **elm)              \
+  ^
+<scratch space>:30:1: note: expanded from here
+event_debug_map_HT_NEXT_RMV
+^
+5 warnings generated.
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x3bd): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5ofb64.o): In function `RC5_32_ofb64_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5ofb64.c:(.text+0xc6): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5_ecb.o): In function `RC5_32_ecb_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5_ecb.c:(.text+0x76): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x72): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x3bd): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5ofb64.o): In function `RC5_32_ofb64_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5ofb64.c:(.text+0xc6): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5_ecb.o): In function `RC5_32_ecb_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5_ecb.c:(.text+0x76): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x72): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x3bd): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5ofb64.o): In function `RC5_32_ofb64_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5ofb64.c:(.text+0xc6): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5_ecb.o): In function `RC5_32_ecb_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5_ecb.c:(.text+0x76): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x72): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x3bd): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5ofb64.o): In function `RC5_32_ofb64_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5ofb64.c:(.text+0xc6): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5_ecb.o): In function `RC5_32_ecb_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5_ecb.c:(.text+0x76): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x72): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/src/minix_trabalho_SO/external/bsd/kyua-cli/dist/engine/kyuafile.cpp:341:1: warning: unused function 'get_table_string' [-Wunused-function]
+get_table_string(lutok::state& state, const char* field,
+^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/dhcp/lib/common/../../dist/common/ns_name.c:29:19: warning: unused variable 'rcsid' [-Wunused-const-variable]
+static const char rcsid[] = "Id: ns_name.c,v 1.2 2009/10/28 04:12:29 sar Exp ";
+                  ^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/dhcp/lib/dst/../../dist/dst/base64.c:54:19: warning: unused variable 'rcsid' [-Wunused-const-variable]
+static const char rcsid[] = "Id: base64.c,v 1.6 2009/11/24 02:06:56 sar Exp ";
+                  ^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/dhcp/lib/dst/../../dist/dst/dst_api.c:3:19: warning: unused variable 'rcsid' [-Wunused-const-variable]
+static const char rcsid[] = "Header: /tmp/cvstest/DHCP/dst/dst_api.c,v 1.10 2012/04/11 15:43:34 sar Exp ";
+                  ^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/dhcp/lib/dst/../../dist/dst/dst_support.c:2:19: warning: unused variable 'rcsid' [-Wunused-const-variable]
+static const char rcsid[] = "Header: /tmp/cvstest/DHCP/dst/dst_support.c,v 1.7 2009/11/24 02:06:56 sar Exp ";
+                  ^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/dhcp/lib/dst/../../dist/dst/hmac_link.c:4:19: warning: unused variable 'rcsid' [-Wunused-const-variable]
+static const char rcsid[] = "Header: /tmp/cvstest/DHCP/dst/hmac_link.c,v 1.6 2009/11/24 02:06:56 sar Exp ";
+                  ^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/dhcp/lib/dst/../../dist/dst/prandom.c:3:19: warning: unused variable 'rcsid' [-Wunused-const-variable]
+static const char rcsid[] = "Header: /tmp/cvstest/DHCP/dst/prandom.c,v 1.10 2012/03/09 11:18:13 tomasz Exp ";
+                  ^
+1 warning generated.
+/usr/src/minix_trabalho_SO/external/bsd/dhcp/bin/server/../../dist/server/dhcpv6.c:690:18: warning: unused variable 'required_opts_NAA' [-Wunused-const-variable]
+static const int required_opts_NAA[] = {
+                 ^
+1 warning generated.
+yacc: 46 shift/reduce conflicts, 87 reduce/reduce conflicts.
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x3bd): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5ofb64.o): In function `RC5_32_ofb64_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5ofb64.c:(.text+0xc6): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5_ecb.o): In function `RC5_32_ecb_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5_ecb.c:(.text+0x76): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x72): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x3bd): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5ofb64.o): In function `RC5_32_ofb64_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5ofb64.c:(.text+0xc6): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5_ecb.o): In function `RC5_32_ecb_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5_ecb.c:(.text+0x76): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x72): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x3bd): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5ofb64.o): In function `RC5_32_ofb64_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5ofb64.c:(.text+0xc6): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(rc5_ecb.o): In function `RC5_32_ecb_encrypt':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/rc5/rc5_ecb.c:(.text+0x76): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+/usr/lib/libcrypto.a(e_rc5.o): In function `EVP_rc5_32_12_16_ecb':
+/usr/src/minix_trabalho_SO/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c:(.text+0x72): warning: RC5 is a patented algorithm; link against libcrypto_rc5
+clang: warning: argument unused during compilation: '-g'
+eval.c:821:34: warning: cast from 'void **' to 'const char **' must have all intermediate pointers const qualified to be safe [-Wcast-qual]
+                                xp->u.strv = (const char **) XPptrv(wv);
+                                                             ^
+./expand.h:103:19: note: expanded from macro 'XPptrv'
+#define XPptrv(x)       ((x).beg)
+                        ^
+1 warning generated.
+pass1.c:242:39: warning: comparison of array 'dp->e2di_blocks' equal to a null pointer is always false [-Wtautological-pointer-compare]
+                    (EXT2_MAXSYMLINKLEN == 0 && dp->e2di_blocks == 0)) {
+                                                ~~~~^~~~~~~~~~~    ~
+1 warning generated.
+dev_mkdb.o: In function `main':
+dev_mkdb.c:(.text+0xf4): warning: warning: mktemp() possibly used unsafely, use mkstemp() or mkdtemp()
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+clang: error: no input files
+format.o: In function `format_device':
+format.c:(.text+0x45a): warning: warning: tmpnam() possibly used unsafely, use mkstemp() or mkdtemp()
+lpd.o: In function `spool':
+lpd.c:(.text+0xd4): warning: warning: mktemp() possibly used unsafely, use mkstemp() or mkdtemp()
+mail.o: In function `main':
+mail.c:(.text+0x47): warning: warning: mktemp() possibly used unsafely, use mkstemp() or mkdtemp()
+synctree.o: In function `islink':
+synctree.c:(.text+0x2068): warning: warning: tmpnam() possibly used unsafely, use mkstemp() or mkdtemp()
+main.c:343:7: warning: missing terminating '"' character [-Winvalid-pp-token]
+      "Minix 3.4.Orc6 - SO - UNIFESP 1s2025\n Projeto Pratico (I) - 
+      ^
+main.c:344:12: warning: missing terminating '"' character [-Winvalid-pp-token]
+Equipe XPTO",
+           ^
+2 warnings generated.
+main.c:343:7: error: missing terminating '"' character [-Werror,-Winvalid-pp-token]
+      "Minix 3.4.Orc6 - SO - UNIFESP 1s2025\n Projeto Pratico (I) - 
+      ^
+main.c:343:7: error: expected ')'
+main.c:336:9: note: to match this '('
+  printf("\nMINIX %s. "
+        ^
+main.c:344:12: error: missing terminating '"' character [-Werror,-Winvalid-pp-token]
+Equipe XPTO",
+           ^
+3 errors generated.
