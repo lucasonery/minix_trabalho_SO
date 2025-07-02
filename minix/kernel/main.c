@@ -347,7 +347,7 @@ static void announce(void)
   printf("MINIX is open source software, see http://www.minix3.org\n");
   printf("=================================================\n");
   printf("Minix3.4.Orc6 - SO - UNIFESP 1s2025\n");
-  printf("Projeto Pratico (I) - Equipe VCCl\n");
+  printf("Projeto Pratico (I) - Equipe 8\n");
   printf("=================================================\n");
 }
 
@@ -366,7 +366,7 @@ void prepare_shutdown(const int how)
   printf("MINIX will now be shut down ...\n");
   printf("==========================================\n");
   printf("ATE A PROXIMA - SO - UNIFESP 1s2025\n");
-  printf("Projeto Pratico (I) - Equipe VCCL\n");
+  printf("Projeto Pratico (I) - Equipe 8\n");
   printf("==========================================\n");
   set_kernel_timer(&shutdown_timer, get_monotonic() + system_hz,
       minix_shutdown, how);

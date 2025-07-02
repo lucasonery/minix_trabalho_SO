@@ -1,7 +1,8 @@
 /* This file contains the scheduling policy for SCHED
  *
  * The entry points are:
- *   do_noquantum:        Called on behalf of process' that run out of quantum
+ *   do_noquantum:        Called on behalf of process' that run out of 
+quantum
  *   do_start_scheduling  Request to start scheduling a proc
  *   do_stop_scheduling   Request to stop scheduling a proc
  *   do_nice		  Request to change the nice level on a proc
@@ -97,10 +98,9 @@ int do_noquantum(message *m_ptr)
 
 	rmp = &schedproc[proc_nr_n];
 
-	//Comentado para FCFS: nao rebaixa prioridade ao fim do quantum
-	//if (rmp->priority < MIN_USER_Q) {
-	//	rmp->priority += 1; /* lower priority */
-	//}
+	rmp->priority=USER_Q;
+	rmp->max_priority=USER_Q;
+	rmp->time_slice=1000000; //Quantum grande para evitar preempcao
 
 	if ((rv = schedule_process_local(rmp)) != OK) {
 		return rv;
@@ -165,7 +165,7 @@ int do_start_scheduling(message *m_ptr)
 	rmp->parent       = m_ptr->m_lsys_sched_scheduling_start.parent;
 	rmp->priority     = USER_Q;
 	rmp->max_priority = USER_Q;
-	rmp->time_slice   = DEFAULT_USER_TIME_SLICE;
+	rmp->time_slice   = 1000000; //Quantum muito grande
 	if (rmp->max_priority >= NR_SCHED_QUEUES) {
 		return EINVAL;
 	}
@@ -177,7 +177,7 @@ int do_start_scheduling(message *m_ptr)
 		/* We have a special case here for init, which is the first
 		   process scheduled, and the parent of itself. */
 		rmp->priority   = USER_Q;
-		rmp->time_slice = DEFAULT_USER_TIME_SLICE;
+		rmp->time_slice = 1000000;
 
 		/*
 		 * Since kernel never changes the cpu of a process, all are
@@ -198,7 +198,7 @@ int do_start_scheduling(message *m_ptr)
 		 * quanum and priority are set explicitly rather than inherited 
 		 * from the parent */
 		rmp->priority   = USER_Q;// FCFS: manter todos na mesma prioridade
-		rmp->time_slice = m_ptr->m_lsys_sched_scheduling_start.quantum;
+		rmp->time_slice = 1000000;
 		break;
 		
 	case SCHEDULING_INHERIT:
@@ -210,7 +210,7 @@ int do_start_scheduling(message *m_ptr)
 			return rv;
 
 		rmp->priority = USER_Q;
-		rmp->time_slice = schedproc[parent_nr_n].time_slice;
+		rmp->time_slice = 1000000;
 		break;
 		
 	default: 
@@ -306,7 +306,7 @@ static int schedule_process(struct schedproc * rmp, unsigned flags)
 	else
 		new_cpu = -1;
 
-	niced = (rmp->max_priority > USER_Q);
+	niced = 0;
 
 	if ((err = sys_schedule(rmp->endpoint, new_prio,
 		new_quantum, new_cpu, niced)) != OK) {
@@ -342,17 +342,7 @@ void init_scheduling(void)
  */
 void balance_queues(void)
 {
-	struct schedproc *rmp;
-	int r, proc_nr;
-
-	for (proc_nr=0, rmp=schedproc; proc_nr < NR_PROCS; proc_nr++, rmp++) {
-		if (rmp->flags & IN_USE) {
-			if (rmp->priority > rmp->max_priority) {
-				rmp->priority -= 1; /* increase priority */
-				schedule_process_local(rmp);
-			}
-		}
-	}
+	int r;
 
 	if ((r = sys_setalarm(balance_timeout, 0)) != OK)
 		panic("sys_setalarm failed: %d", r);
