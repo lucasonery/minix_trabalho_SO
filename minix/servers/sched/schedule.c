@@ -15,6 +15,25 @@
 
 static unsigned balance_timeout;
 
+static unsigned sjn_prio(unsigned est){
+	const unsigned min_burst = 1;
+	const unsigned max_burst = 200;
+	const unsigned min_prio =USER_Q;
+	const unsigned max_prio = MIN_USER_Q;
+	
+	if(est <= min_burst) return min_prio;
+	if(est>=max_burst) return max_prio;
+
+	unsigned prio = min_prio +((est-min_burst) * (max_prio - min_prio)) /(max_burst - min_burst);
+	
+	if(prio<USER_Q) prio = USER_Q;
+	if(prio>MIN_USER_Q) prio = MIN_USER_Q;
+	
+	return prio;
+}
+
+		
+
 #define BALANCE_TIMEOUT	5 /* how often to balance queues in seconds */
 
 static int schedule_process(struct schedproc * rmp, unsigned flags);
@@ -39,6 +58,10 @@ static int schedule_process(struct schedproc * rmp, unsigned flags);
 #define cpu_is_available(c)	(cpu_proc[c] >= 0)
 
 #define DEFAULT_USER_TIME_SLICE 200
+
+#define DEFAULT_EST_BURST 100
+
+#define ALPHA 0.5
 
 /* processes created by RS are sysytem processes */
 #define is_system_proc(p)	((p)->parent == RS_PROC_NR)
@@ -88,6 +111,7 @@ int do_noquantum(message *m_ptr)
 {
 	register struct schedproc *rmp;
 	int rv, proc_nr_n;
+	unsigned last_burst;
 
 	if (sched_isokendpt(m_ptr->m_source, &proc_nr_n) != OK) {
 		printf("SCHED: WARNING: got an invalid endpoint in OOQ msg %u.\n",
@@ -97,17 +121,18 @@ int do_noquantum(message *m_ptr)
 
 	rmp = &schedproc[proc_nr_n];
 
-	if(rmp->estimated_burst > rmp->time_slice) {
-		rmp->estimated_burst -= rmp->time_slice;
-	}else {
-		rmp->estimated_burst = 0;
-	}
+	last_burst=rmp->time_slice;
+	
+	rmp->estimated_burst = (unsigned)(ALPHA * last_burst + (1 - ALPHA) * rmp->estimated_burst);
+	
+	rmp->priority = sjn_prio (rmp->estimated_burst);
+	rmp->max_priority = rmp->priority;
 
-	rmp->priority = USER_Q;
-
-	if ((rv = schedule_process_local(rmp)) != OK) {
+	if((rv=schedule_process_local(rmp)) != OK) {
 		return rv;
 	}
+
+
 	return OK;
 }
 
@@ -141,7 +166,8 @@ int do_stop_scheduling(message *m_ptr)
 }
 
 /*===========================================================================*
- *				do_start_scheduling			     *
+ *				do_start_scheduling			     
+*
  *===========================================================================*/
 int do_start_scheduling(message *m_ptr)
 {
@@ -167,9 +193,19 @@ int do_start_scheduling(message *m_ptr)
 	
 	rmp->endpoint     = m_ptr->m_lsys_sched_scheduling_start.endpoint;
 	rmp->parent       = m_ptr->m_lsys_sched_scheduling_start.parent;
-	rmp->priority     = USER_Q;
-	rmp->max_priority = USER_Q;
+
+	if(m_ptr->m_lsys_sched_scheduling_start.quantum > 0) {
+		rmp->estimated_burst = m_ptr->m_lsys_sched_scheduling_start.quantum;
+	} else{
+		rmp->estimated_burst = DEFAULT_USER_TIME_SLICE;
+	}
+
+	rmp->priority     = sjn_prio(rmp->estimated_burst);
+	rmp->max_priority = rmp->priority;
+
 	rmp->time_slice   = DEFAULT_USER_TIME_SLICE;
+
+
 	if (rmp->max_priority >= NR_SCHED_QUEUES) {
 		return EINVAL;
 	}
@@ -178,11 +214,11 @@ int do_start_scheduling(message *m_ptr)
 	 * is currently only one scheduler scheduling the whole system, this
 	 * value is local and we assert that the parent endpoint is valid */
 	
-	rmp->estimated_burst = m_ptr->m_lsys_sched_scheduling_start.quantum;
 	if (rmp->endpoint == rmp->parent) {
 		/* We have a special case here for init, which is the first
 		   process scheduled, and the parent of itself. */
-		rmp->priority   = USER_Q;
+		rmp->priority   = sjn_prio(rmp->estimated_burst);
+		rmp->max_priority = rmp->priority;
 		rmp->time_slice = DEFAULT_USER_TIME_SLICE;
 
 		/*
@@ -203,7 +239,6 @@ int do_start_scheduling(message *m_ptr)
 		/* We have a special case here for system processes, for which
 		 * quanum and priority are set explicitly rather than inherited 
 		 * from the parent */
-		rmp->priority   = USER_Q;// FCFS: manter todos na mesma prioridade
 		rmp->time_slice = m_ptr->m_lsys_sched_scheduling_start.quantum;
 		break;
 		
@@ -215,7 +250,6 @@ int do_start_scheduling(message *m_ptr)
 				&parent_nr_n)) != OK)
 			return rv;
 
-		rmp->priority = USER_Q;
 		rmp->time_slice = schedproc[parent_nr_n].time_slice;
 		break;
 		
@@ -267,7 +301,6 @@ int do_nice(message *m_ptr)
 	struct schedproc *rmp;
 	int rv;
 	int proc_nr_n;
-	unsigned new_q, old_q, old_max_q;
 
 	/* check who can send you requests */
 	if (!accept_message(m_ptr))
@@ -281,15 +314,16 @@ int do_nice(message *m_ptr)
 
 	rmp = &schedproc[proc_nr_n];
 	
-	rmp->priority   = USER_Q;
-	rmp->max_priority = USER_Q;
+	rmp->priority   = sjn_prio(rmp->estimated_burst);
+	rmp->max_priority = rmp->priority;
 
 	return schedule_process_local(rmp);
 }
 
 /*===========================================================================*
  *				schedule_process			     *
- *===========================================================================*/
+ 
+*===========================================================================*/
 static int schedule_process(struct schedproc * rmp, unsigned flags)
 {
 	int err;
@@ -298,7 +332,7 @@ static int schedule_process(struct schedproc * rmp, unsigned flags)
 	pick_cpu(rmp);
 
 	if (flags & SCHEDULE_CHANGE_PRIO)
-		new_prio = USER_Q;
+		new_prio = rmp->priority;
 	else
 		new_prio = -1;
 
@@ -348,18 +382,6 @@ void init_scheduling(void)
  */
 void balance_queues(void)
 {
-	struct schedproc *rmp;
-	int r, proc_nr;
+	return;
 
-	for (proc_nr=0, rmp=schedproc; proc_nr < NR_PROCS; proc_nr++, rmp++) {
-		if (rmp->flags & IN_USE) {
-			if (rmp->priority > rmp->max_priority) {
-				rmp->priority -= 1; /* increase priority */
-				schedule_process_local(rmp);
-			}
-		}
-	}
-
-	if ((r = sys_setalarm(balance_timeout, 0)) != OK)
-		panic("sys_setalarm failed: %d", r);
 }

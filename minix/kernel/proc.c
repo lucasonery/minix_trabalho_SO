@@ -135,6 +135,7 @@ void proc_init(void)
 		rp->p_scheduler = NULL;		/* no user space scheduler */
 		rp->p_priority = 0;		/* no priority */
 		rp->p_quantum_size_ms = 0;	/* no quantum size */
+		rp->estimated_burst = 200;
 
 		/* arch-specific initialization */
 		arch_proc_reset(rp);
@@ -1788,27 +1789,35 @@ static struct proc * pick_proc(void)
 	int q;
 	struct proc **rdy_head;
 	struct proc *rp, *best_proc = NULL;
-	unsigned short min_burst = (unsigned short) -1;
+	unsigned short min_burst;
 
 	rdy_head = get_cpulocal_var(run_q_head);
 
 	for(q=0;q<NR_SCHED_QUEUES;q++){
 		rp=rdy_head[q];
-		while (rp != NULL) {
+		if(!rp){
+			continue;
+		}
+		min_burst = (unsigned short) -1;
+		
+		while(rp!=NULL) {
 			if(proc_is_runnable(rp)) {
 				if(rp->estimated_burst < min_burst) {
 					min_burst = rp->estimated_burst;
-					best_proc = rp;
+					best_proc=rp;
 				}
 			}
-			rp = rp ->p_nextready;
+			rp=rp->p_nextready;
+		}
+		if(best_proc !=NULL) {
+			break;
 		}
 	}
-	if (best_proc != NULL && (priv(best_proc) -> s_flags & BILLABLE)) {
+	if(best_proc != NULL && (priv(best_proc)->s_flags &  BILLABLE)) {
 		get_cpulocal_var(bill_ptr) = best_proc;
 	}
 	return best_proc;
-	
+		
 }
 
 /*===========================================================================*
