@@ -1784,32 +1784,60 @@ void dequeue(struct proc *rp)
  *===========================================================================*/
 static struct proc * pick_proc(void)
 {
-/* Decide who to run now.  A new process is selected and returned.
- * When a billable process is selected, record it in 'bill_ptr', so that the 
- * clock task can tell who to bill for system time.
- *
- * This function always uses the run queues of the local cpu!
- */
-  register struct proc *rp;			/* process to run */
-  struct proc **rdy_head;
-  int q;				/* iterate over queues */
+    register struct proc *rp;   
+    struct proc **rdy_head;
+    int q;                      
 
-  /* Check each of the scheduling queues for ready processes. The number of
-   * queues is defined in proc.h, and priorities are set in the task table.
-   * If there are no processes ready to run, return NULL.
-   */
-  rdy_head = get_cpulocal_var(run_q_head);
-  for (q=0; q < NR_SCHED_QUEUES; q++) {	
-	if(!(rp = rdy_head[q])) {
-		TRACE(VF_PICKPROC, printf("cpu %d queue %d empty\n", cpuid, q););
-		continue;
-	}
-	assert(proc_is_runnable(rp));
-	if (priv(rp)->s_flags & BILLABLE)	 	
-		get_cpulocal_var(bill_ptr) = rp; /* bill for system time */
-	return rp;
-  }
-  return NULL;
+    rdy_head = get_cpulocal_var(run_q_head);
+
+    /* Retorna o processo com maior prioridade entre as filas 0 a Q_USER - 1 */
+    for (q = 0; q < USER_Q; q++) {
+        if ((rp = rdy_head[q]) != NULL) {
+            assert(proc_is_runnable(rp));
+            if (priv(rp)->s_flags & BILLABLE)
+                get_cpulocal_var(bill_ptr) = rp;
+            return rp;
+        }
+    }
+
+    /* Realiza a loteria para os processos de usuário */
+    unsigned int total_tickets = 0;
+    u64_t total_cycles = 0; 
+
+	
+    /* Conta o total de bilhetes e ciclos */
+    for (q = USER_Q; q < NR_SCHED_QUEUES; q++) {
+        for (rp = rdy_head[q]; rp != NULL; rp = rp->p_nextready) {
+            if (rp->p_tickets == 0) {
+                rp->p_tickets = 100; /* Valor padrão de bilhetes */
+            }
+            total_tickets += rp->p_tickets;
+            total_cycles += rp->p_cycles; /* Acumula os ciclos de cada processo */
+        }
+    }
+
+    if (total_tickets == 0) {
+        return NULL;
+    }
+
+    /* Sorteia um bilhete */
+    unsigned int winning_ticket = total_cycles % total_tickets;
+    
+    /* Retorna o processo referente ao bilhete sorteado */
+    unsigned int ticket_counter = 0;
+    for (q = USER_Q; q < NR_SCHED_QUEUES; q++) {
+        for (rp = rdy_head[q]; rp != NULL; rp = rp->p_nextready) {
+            ticket_counter += rp->p_tickets;
+            if (ticket_counter > winning_ticket) {
+                assert(proc_is_runnable(rp));
+                if (priv(rp)->s_flags & BILLABLE)
+                    get_cpulocal_var(bill_ptr) = rp;
+                return rp;
+            }
+        }
+    }
+
+    return NULL;
 }
 
 /*===========================================================================*
