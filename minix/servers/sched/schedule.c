@@ -177,7 +177,7 @@ int do_start_scheduling(message *m_ptr)
 		/* We have a special case here for init, which is the first
 		   process scheduled, and the parent of itself. */
 		rmp->priority   = USER_Q;
-		rmp->time_slice = 1000000;
+		rmp->time_slice = 1000000; // Quantum muito grande
 
 		/*
 		 * Since kernel never changes the cpu of a process, all are
@@ -198,7 +198,7 @@ int do_start_scheduling(message *m_ptr)
 		 * quanum and priority are set explicitly rather than inherited 
 		 * from the parent */
 		rmp->priority   = USER_Q;// FCFS: manter todos na mesma prioridade
-		rmp->time_slice = 1000000;
+		rmp->time_slice = 1000000; // Quantum muito grande
 		break;
 		
 	case SCHEDULING_INHERIT:
@@ -210,7 +210,7 @@ int do_start_scheduling(message *m_ptr)
 			return rv;
 
 		rmp->priority = USER_Q;
-		rmp->time_slice = 1000000;
+		rmp->time_slice = 1000000; // Quantum muito grande
 		break;
 		
 	default: 
@@ -343,6 +343,7 @@ void init_scheduling(void)
 void balance_queues(void)
 {
 	int r;
+	// Apenas reinicia o alarme, sem alterar prioridade de ninguém
 
 	if ((r = sys_setalarm(balance_timeout, 0)) != OK)
 		panic("sys_setalarm failed: %d", r);
