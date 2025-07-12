@@ -122,9 +122,11 @@ int do_noquantum(message *m_ptr)
 	rmp = &schedproc[proc_nr_n];
 
 	last_burst=rmp->time_slice;
-	
+
+	// Atualiza a estimativa de burst com média exponencial
 	rmp->estimated_burst = (unsigned)(ALPHA * last_burst + (1 - ALPHA) * rmp->estimated_burst);
-	
+
+	// Atualiza a prioridade baseada na nova estimativa
 	rmp->priority = sjn_prio (rmp->estimated_burst);
 	rmp->max_priority = rmp->priority;
 
@@ -193,13 +195,14 @@ int do_start_scheduling(message *m_ptr)
 	
 	rmp->endpoint     = m_ptr->m_lsys_sched_scheduling_start.endpoint;
 	rmp->parent       = m_ptr->m_lsys_sched_scheduling_start.parent;
-
+	// Inicializa burst estimado com o quantum recebido
 	if(m_ptr->m_lsys_sched_scheduling_start.quantum > 0) {
 		rmp->estimated_burst = m_ptr->m_lsys_sched_scheduling_start.quantum;
 	} else{
+		// Usa valor padrão
 		rmp->estimated_burst = DEFAULT_USER_TIME_SLICE;
 	}
-
+	// Define a prioridade baseada no burst
 	rmp->priority     = sjn_prio(rmp->estimated_burst);
 	rmp->max_priority = rmp->priority;
 
